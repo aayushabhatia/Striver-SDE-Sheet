@@ -1,0 +1,37 @@
+// 73. Set matrix zeroes
+// Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+
+// https://leetcode.com/problems/set-matrix-zeroes/description/
+// https://takeuforward.org/data-structure/set-matrix-zero/
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        int m = matrix[0].size();
+        
+        vector<int> col(m, 0);
+        vector<int> row(n, 0);
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(matrix[i][j]==0){
+                    row[i]=1;
+                    col[j]=1;
+                }
+            }
+        }
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(col[j]||row[i]){
+                    matrix[i][j]=0;
+                }
+            }
+        }
+    }
+};
