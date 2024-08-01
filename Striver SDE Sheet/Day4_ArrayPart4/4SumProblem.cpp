@@ -6,7 +6,10 @@
 using namespace std;
 
 //Optimal Solution - w/o brute force and hashset
-int n = nums.size(); //size of the array
+class Solution {
+public:
+    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+    int n = nums.size(); //size of the array
     vector<vector<int>> ans;
 
     // sort the given array:
@@ -44,3 +47,5 @@ int n = nums.size(); //size of the array
     }
 
     return ans;
+    }
+};
