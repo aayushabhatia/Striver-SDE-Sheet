@@ -1,4 +1,4 @@
-// 128. Longest Consecutive Sum
+// 128. Longest Consecutive Sequence of numbers
 // https://leetcode.com/problems/longest-consecutive-sequence/
 // https://takeuforward.org/data-structure/longest-consecutive-sequence-in-an-array/
 
