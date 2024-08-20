@@ -1,4 +1,4 @@
-// Remove Nth Node from Linked List
+// Remove Nth Node from Linked List (from back of LL)
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 // https://takeuforward.org/data-structure/remove-n-th-node-from-the-end-of-a-linked-list/
 
