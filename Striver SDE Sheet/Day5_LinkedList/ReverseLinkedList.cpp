@@ -12,21 +12,19 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
-
-// DSA Udemy solution
+// striver soln
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode* c = head;
-        ListNode* p = NULL;
-        ListNode* N;
-        while(c != NULL){
-            N = c-> next;
-            c -> next = p;
-            p = c;
-            c = N;
+        ListNode* temp = head; 
+        ListNode* prev = NULL;  
+        while(temp != NULL){  
+            ListNode* front = temp->next; 
+            temp->next = prev;  
+            prev = temp; 
+            temp = front; 
         }
-        head = p;
-        return head;
+        return prev;  
     }
 };
+
