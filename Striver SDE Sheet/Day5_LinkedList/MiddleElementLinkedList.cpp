@@ -12,24 +12,17 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
-
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-    // Initialize the slow pointer to the head.
-    ListNode *slow = head; 
-    
-     // Initialize the fast pointer to the head.
-    ListNode *fast = head; 
-
-    // Traverse the linked list using the Tortoise and Hare algorithm.
-    while (fast != NULL && fast->next != NULL) {
-        // Move slow one step.
-        slow = slow->next; 
-         // Move fast two steps.
-        fast = fast->next->next; 
-    }
-     // Return the slow pointer, which is now at the middle node.
-    return slow; 
+        // tortoise and hare algo
+        ListNode* slow =  head;
+        ListNode* fast = head; // initialising both of them with head
+        while(fast!= NULL && fast->next != NULL){
+            slow = slow->next; // moving 1 step at a time
+            fast = fast->next->next; //moving two steps at a time
+        }
+        return slow; // by the time fast reaches last node or NULL, slow will be at middle position
+        
     }
 };
