@@ -1,4 +1,4 @@
-// Delete a given node in LinkedList 
+// Delete a given node in LinkedList (head of LL is not given)
 // https://leetcode.com/problems/delete-node-in-a-linked-list/
 // https://takeuforward.org/data-structure/delete-given-node-in-a-linked-list-o1-approach/
 
