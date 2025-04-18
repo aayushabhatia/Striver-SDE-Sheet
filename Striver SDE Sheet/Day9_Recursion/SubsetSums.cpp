@@ -1,4 +1,6 @@
 // https://www.geeksforgeeks.org/problems/subset-sums2234/1
+// https://takeuforward.org/data-structure/subset-sum-sum-of-all-subsets/
+
 class Solution {
   public:
       void func(int ind, int sum, vector<int> arr, int N, vector<int> &SubsetSum){
