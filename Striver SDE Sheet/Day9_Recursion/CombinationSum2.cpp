@@ -4,7 +4,7 @@
 class Solution {
 public:
     void findSubsets(int ind, vector<int> &candidates, vector<int> &ds, int target, vector<vector<int>> &ans){
-        
+            // base case
             if(target==0){
                 ans.push_back(ds);
                 return;
@@ -13,11 +13,11 @@ public:
         
         //picking element
         for (int i = ind; i < candidates.size(); i++) {
-    if (i > ind && candidates[i] == candidates[i - 1]) continue;
-    if (candidates[i] > target) break;
+    if (i > ind && candidates[i] == candidates[i - 1]) continue; // to avoid picking up same elements in one recursion call
+    if (candidates[i] > target) break; // if arr value becomes greater than target , break the loop
     ds.push_back(candidates[i]);
     findSubsets(i + 1, candidates, ds,  target - candidates[i], ans);
-    ds.pop_back();
+    ds.pop_back(); // pop out the element for the next recursion call
   }
 
         
